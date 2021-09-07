@@ -1,18 +1,26 @@
 import { connect } from 'react-redux';
 import { Dispatch } from 'redux';
+import { createListMovieMoreReqAction, createListMovieReqAction } from 'src/actions/movieAction';
 import MovieList from 'src/components/MovieList';
 
 import { IStoreState } from '../reducers';
 
 export function mapStateToProps( state: IStoreState) {
   return {
-   
+    moviesData: state.moviesState.movies ,
+    moviesQuery:  state.moviesState.moviesQuery
   };
 }
 
 export function mapDispatchToProps(dispatch: Dispatch) {
   return {
-   
+    // ejecutamos los dispatcher de Redux para la carga de datos
+    onListMovieReq: ( query?: string ) => {
+      dispatch( createListMovieReqAction( query ) )
+    },   
+    onListMovieMoreReq: ( ) => {
+      dispatch( createListMovieMoreReqAction(  ) )
+    },   
   };
 
 }
