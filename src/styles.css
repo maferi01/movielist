@@ -51,6 +51,10 @@
     font-weight: bolder;
  }
 
+ button:disabled{
+    background-color: lightgray;
+ }
+
  input, textarea{
     font-size: 18px;
     margin: 5px 0px;

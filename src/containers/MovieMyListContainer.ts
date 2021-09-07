@@ -6,8 +6,7 @@ import { IStoreState } from '../reducers';
 
 export function mapStateToProps( state: IStoreState) {
   return {
-    moviesData: state.moviesState.moviesMyList 
-    
+    moviesData: state.moviesState.moviesMyList        
   };
 }
 

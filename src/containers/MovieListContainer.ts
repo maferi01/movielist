@@ -8,7 +8,8 @@ import { IStoreState } from '../reducers';
 export function mapStateToProps( state: IStoreState) {
   return {
     moviesData: state.moviesState.movies ,
-    moviesQuery:  state.moviesState.moviesQuery
+    moviesQuery:  state.moviesState.moviesQuery,
+    hasMore: (state.moviesState.total_pages as number) > (state.moviesState.page as number)
   };
 }
 

@@ -10,7 +10,8 @@ import MovieCard from './MovieCard';
 
 interface IProps extends RouteComponentProps<MovieList>{
   moviesData: IMovie[];
-  moviesQuery: string;
+  moviesQuery: string; 
+  hasMore: boolean;
   // propiedades para invocar la carga de movies, consulta y paginación
   onListMovieReq: ( query?: string ) => void, 
   onListMovieMoreReq: ( ) => void, 
@@ -35,7 +36,7 @@ class MovieList extends React.Component<IProps, {}> {
           <div className="container-list">  
             { this.makeVideoElements() }
           </div>
-          <button onClick={()=>this.props.onListMovieMoreReq()}>Mas películas...</button>
+           {this.props.hasMore && <button onClick={()=>this.props.onListMovieMoreReq()} >Mas películas...</button> }
         </div> 
     );
   }
