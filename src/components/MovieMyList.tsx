@@ -23,7 +23,7 @@ class MovieMyList extends React.Component<IProps, {}> {
         <div>
           <Link to={ RouterPathEnum.MOVIE_LIST} className="link"> Ir a lista principal...</Link>
         
-          <h2>Mi lista de películas:</h2>
+          <h1>Mi lista de películas:</h1>
           &nbsp;
           <div className="container-list">  
             {this.props.moviesData.length>0 ? this.makeVideoElements(): this.makeElementEmpty() }

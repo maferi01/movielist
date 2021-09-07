@@ -9,7 +9,7 @@ import { IMovie, IMoviesState } from 'src/states/MovieState';
 const initialState: IMoviesState = {
   movies: [],
   moviesMyList: [],
-  moviesQuery: 'Alien',
+  moviesQuery: 'movie',
 };
 /**
  * 

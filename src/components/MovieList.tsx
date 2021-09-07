@@ -31,7 +31,7 @@ class MovieList extends React.Component<IProps, {}> {
         <div>
            <Link to={ RouterPathEnum.MOVIE_MY_LIST} className="link"> Ir a mi lista...</Link>
           <FilterMovies onFilter={query=> this.props.onListMovieReq(query)} query={this.props.moviesQuery}/>
-          <h2>Listado de películas:</h2>
+          <h1>Listado de películas:</h1>
           &nbsp;
           <div className="container-list">  
             { this.props.moviesData.length>0?this.makeVideoElements() : this.makeElementEmpty()}

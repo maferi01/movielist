@@ -25,7 +25,7 @@ class MovieDetail extends React.Component<IProps, {}> {
       <div>
         <Link to={RouterPathEnum.MOVIE_LIST} className="link">Volver al listado ...</Link>
         <Link to={ RouterPathEnum.MOVIE_MY_LIST} className="link"> Ir a mi listado...</Link>
-        <h2>Datos de la película :</h2>
+        <h1>Datos de la película :</h1>
         &nbsp;
         <MovieCard movieData={this.props.movieData}  extended={true}/> 
         <FormMovie
