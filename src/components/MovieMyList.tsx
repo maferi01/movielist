@@ -26,7 +26,7 @@ class MovieMyList extends React.Component<IProps, {}> {
           <h2>Mi lista de películas:</h2>
           &nbsp;
           <div className="container-list">  
-            { this.makeVideoElements() }
+            {this.props.moviesData.length>0 ? this.makeVideoElements(): this.makeElementEmpty() }
           </div>
         </div> 
     );
@@ -40,6 +40,10 @@ class MovieMyList extends React.Component<IProps, {}> {
         );
     })
   );  
+
+  private makeElementEmpty = () => (
+    <h3>Lista vacía. !!</h3>    
+);
  
 }
 
